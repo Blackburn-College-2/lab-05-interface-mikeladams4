@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab05;
+package Lab05;
 
 /**
  *
  * @author mikel.adams
  */
-public class Walk implements CanTravel {
+public class Train implements CanTravel{
 
-    double speed = 5.5;
+    double speed = 50.0;
 
-    public Walk() {
+    public Train() {
     }
 
     @Override
@@ -21,12 +21,11 @@ public class Walk implements CanTravel {
         double hours;
         double minutes;
         double totalMinutes;
-        System.out.println("Person walking: " + miles + " miles.");
-        hours = Math.floor(miles/speed);
-        minutes = Math.floor(((miles/speed) - hours) * 60);
-        System.out.println("It takes: " + (int)hours + " hours and " + (int)minutes + " minutes.");
+        System.out.println("Train Travels: " + miles + " miles.");
+        hours = Math.floor(miles / speed);
+        minutes = Math.floor(((miles / speed) - hours) * 60);
+        System.out.println("It takes: " + (int) hours + " hours and " + (int) minutes + " minutes.");
         totalMinutes = (hours*60) + minutes;
         return totalMinutes;
     }
-
 }

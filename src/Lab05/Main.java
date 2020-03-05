@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab05;
+package Lab05;
 
 /**
  *
  * @author mikel.adams
  */
-public class Lab05 {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -18,7 +18,17 @@ public class Lab05 {
         Walk Walk = new Walk();
         Plane Plane = new Plane();
         Train Train = new Train();
+        Bicycle Bicycle = new Bicycle();
+        Car Car = new Car();
+        Rollerskates Rollerskates = new Rollerskates();
+        Running Running = new Running();
         roundTrip(Walk, 10);
+        roundTrip(Plane, 10);
+        roundTrip(Train, 10);
+        roundTrip(Car, 600);
+        roundTrip(Rollerskates, 10);
+        roundTrip(Bicycle, 10);
+        roundTrip(Running, 12);
     }
 
     public static void roundTrip(CanTravel x, double miles) {

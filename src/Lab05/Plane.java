@@ -3,27 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab05;
+package Lab05;
 
 /**
  *
  * @author mikel.adams
  */
-public class Train implements CanTravel{
+public class Plane implements CanTravel{
 
-    double speed = 50.0;
+    double speed = 450.0;
 
-    public Train() {
+    public Plane() {
     }
 
     @Override
     public double move(double miles) {
         double hours;
         double minutes;
-        System.out.println("Train Travels: " + miles + " miles.");
+        double totalMinutes;
+        System.out.println("Plane Travels: " + miles + " miles.");
         hours = Math.floor(miles / speed);
         minutes = Math.floor(((miles / speed) - hours) * 60);
+        hours = hours + 2;
         System.out.println("It takes: " + (int) hours + " hours and " + (int) minutes + " minutes.");
-        return hours;
+        totalMinutes = (hours*60) + minutes;
+        return totalMinutes;
     }
 }
